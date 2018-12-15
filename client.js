@@ -8,6 +8,11 @@ $(document).ready(function () {
         $('#jobTitle').val(``);
         $('#annualSalary').val(``);
     });
+    
+    $('#deleteEmpoyee').on('click', function () {
+
+    })
+    
 })
 
 
@@ -26,19 +31,19 @@ function submitEmployeeInfo() {
     $('.employeeListForm').append('<li>Salary: ' + annualSalary + '</li>');
     $('.employeeListForm').append('<br>');
     
-    // $( '#firstName' ).each(function(){
-    //     this.reset();
-    // });
-    
+
 }
 
-function calculateCosts() {
 
+function calculateCosts() {
+    
     let monthlySalary = $('#annualSalary').val() / 12;
-   
     $('.monthlyCosts').html('<h2>Monthly Costs: $' + monthlySalary + '</h2>')
 
     if (monthlySalary > 20000) {
         $('.monthlyCosts').css('color', 'red');
+        
     }
+
+    
 }
