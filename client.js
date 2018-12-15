@@ -9,8 +9,11 @@ $(document).ready(function () {
         $('#annualSalary').val(``);
     });
     
-    $('#deleteEmpoyee').on('click', function () {
-
+    $('#deleteEmployee').on('click', function () {
+        $('#fN').empty();
+        $('#iD').empty();
+        $('#jT').empty();
+        $('#aS').empty();
     })
     
 })
@@ -25,10 +28,10 @@ function submitEmployeeInfo() {
     let annualSalary = $('#annualSalary').val();
 
     
-    $('.employeeListForm').append('<li>Full Name: ' + firstName + ' ' + lastName + '</li>');
-    $('.employeeListForm').append('<li>ID Number: ' + iDNumber + '</li>');
-    $('.employeeListForm').append('<li>Title: ' + jobTitle + '</li>');
-    $('.employeeListForm').append('<li>Salary: ' + annualSalary + '</li>');
+    $('.employeeListForm').append('<li id="fN">Full Name: ' + firstName + ' ' + lastName + '</li>');
+    $('.employeeListForm').append('<li id="iD">ID Number: ' + iDNumber + '</li>');
+    $('.employeeListForm').append('<li id="jT">Title: ' + jobTitle + '</li>');
+    $('.employeeListForm').append('<li id="aS">Salary: ' + annualSalary + '</li>');
     $('.employeeListForm').append('<br>');
     
 
@@ -47,3 +50,4 @@ function calculateCosts() {
 
     
 }
+
