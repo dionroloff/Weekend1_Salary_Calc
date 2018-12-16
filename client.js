@@ -10,10 +10,12 @@ $(document).ready(function () {
     });
     
     $('#deleteEmployee').on('click', function () {
+        
         $('#fN').empty();
         $('#iD').empty();
         $('#jT').empty();
         $('#aS').empty();
+        
     })
     
 })
@@ -41,6 +43,7 @@ function submitEmployeeInfo() {
 function calculateCosts() {
     
     let monthlySalary = ($('#annualSalary').val() / 12).toFixed(2);
+    
     $('.monthlyCosts').html('<h2>Monthly Costs: $' + monthlySalary + '</h2>')
 
     if (monthlySalary > 20000) {
