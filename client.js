@@ -1,7 +1,5 @@
 $(document).ready(function () {
-    $('#submitButton').on('click', submitEmployeeInfo);
-    
-    // $('#submitButton').on('click', calculateCosts);
+    $('.submitButton').on('click', submitEmployeeInfo);
     
 
     $('#employee-list').on('click', '.delete', function() {
@@ -13,18 +11,18 @@ $(document).ready(function () {
     
 })
 
-
+let monthlySalary = 0;
 
 
 //collects an employee's information from the input fields and appends it to the DOM
 function submitEmployeeInfo() {
 
-    let monthlySalary = ($('#annualSalary').val() / 12).toFixed(2);
-    $('.monthlyCosts').html(`<h2>Monthly Costs: ${monthlySalary}</h2>`);
+    monthlySalary += $('#annualSalary').val() / 12;
+    $('.monthlyCosts').html(`<h2>Monthly Costs: $${monthlySalary}</h2>`);
 
     if (monthlySalary > 20000) {
         $('.monthlyCosts').css('color', 'red');
-        
+    
     } 
 
     //assigning input values to variables
