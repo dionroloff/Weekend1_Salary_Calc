@@ -11,6 +11,7 @@ let totalMonthlySalary = 0;
 const MAX_MONTHLY_SALARY = 20000;
 const RED = 'rgb(255, 0, 0)';
 
+
 class Employee {
     constructor(first, last, employeeId, title, salary) {
         this.first = first;
@@ -36,7 +37,7 @@ class Employee {
     } 
 } 
 
-
+//Removes an employee from the DOM, decrements the monthly salary, and changes color
 function deleteEmployee() {
     
     let deletedEmployeeSalary = $(this).parent().prev().prev().text();   
@@ -52,7 +53,7 @@ function deleteEmployee() {
     }
 
 } 
-
+//attaches an employee to the DOM based on input values
 function addEmployee() {
 
     
@@ -78,7 +79,7 @@ function addEmployee() {
 
 } 
 
-
+//Attaches the total monthly salary to the DOM, changes color to red if over $20,000
 function calculateCosts() {
     
     let monthlySalary = ($('#annualSalary').val() / 12).toFixed(2);
