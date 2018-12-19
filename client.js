@@ -20,7 +20,7 @@ $(document).ready(function () {
 
 
 
-
+//collects an employee's information from the input fields and appends it to the DOM
 function submitEmployeeInfo() {
     let firstName = $('#firstName').val();
     let lastName = $('#lastName').val();
@@ -44,7 +44,7 @@ function submitEmployeeInfo() {
 
 }
 
-
+//calculates the monthly cost of employee slaries
 function calculateCosts() {
     
     let monthlySalary = ($('#annualSalary').val() / 12).toFixed(2);
