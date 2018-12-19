@@ -6,44 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="jquery-3.3.1.min copy 2.js"></script>
     <script src="client.js"></script>
-    <link rel="stylesheet" href="styles.css">
-    <title>Weekend project</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Salary Calculator</title>
 </head>
 <body>
-    <h1>Add An Employee</h1>
     
-    <div id="input-fields">
-       
-        <input type="text" id="first-name" placeholder="First Name"/>
-        <input type="text" id="last-name" placeholder="Last Name"/>
-        <input type="text" id="employee-id" placeholder="Employee ID"/>
-        <input type="text" id="title" placeholder="Job Title"/>
-        <input type="text" id="salary" placeholder="Salary"/>
+    <!-- input fields and submit button div -->
+    <div class="container">
+        <h2>Add Employee</h2>
+        <input type="text" id="firstName" placeholder="First Name" value="Dion">
+        <input type="text" id="lastName" placeholder="Last Name" value="Roloff">
+        <input type="number" id="iDNumber" placeholder="ID" value="5000">
+        <input type="text" id="jobTitle" placeholder="Title" value="boss">
+        <input type="number" id="annualSalary" placeholder="Annual Salary" value="3000000">
+        <button id="submitButton">Submit</button>
         
-        <button id="submit">Submit Employee</button>
     </div>
     
-    <table>
-        <thead>
-            <tr>
-                <th>First</th>
-                <th>Last</th>
-                <th>Employee ID</th>
-                <th>Salary</th>
-                <th>Title</th>
-                <th>Delete</th>
-            </tr>
-        </thead>
-        
-        <tbody id="employee-list">
+    <!-- actual form -->
+    <div>
+        <h2>Employees</h2>
+        <ul class="employeeListForm">
+           
+        </ul>
+    </div>
 
-            
-            
-        </tbody>
-    </table>
-   
-    <div id="monthly-total">
-        
+    <div class="monthlyCosts">
+        Monthly Costs: 0.00
     </div>
+
 </body>
 </html>
