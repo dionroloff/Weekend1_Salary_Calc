@@ -2,8 +2,6 @@ body {
     font-family: helvetica;
 }
 
-#submitButton {
-   
-    margin: 20px;
+#submit {
+    color: green;
 }
-
